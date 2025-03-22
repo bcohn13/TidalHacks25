@@ -1,8 +1,9 @@
+import os
 from flask import Flask, request, jsonify, render_template
 import google.generativeai as genai
 
 # ✅ Replace with your actual API key
-genai.configure(api_key="AIzaSyAIelnAg8MwqCDQ1LwYwvcW_aJon29vE2g")
+genai.configure(api_key=os.environ.get("api_key"))
 
 app = Flask(__name__, template_folder="frontend/templates", static_folder="frontend/static")
 
