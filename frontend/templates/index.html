@@ -11,16 +11,14 @@
 
     <!-- Sidebar -->
     <aside class="sidebar">
-        <h2>Subjects</h2>
-        <div class="subject-scroll">
-            {% for course in courses %}
-            <a href="/course/{{ course.code }}">
-                {{ course.code }}{% if course.title() %} - {{ course.title() }}{% endif %}
-              </a>
-              
-              
-          {% endfor %}
-        </div>
+      <h2>CSCE Courses</h2>
+      <div class="subject-scroll">
+        {% for course in courses %}
+          <a href="{{ url_for('summary_page', course_code=course.code) }}">
+            {{ course.code }}{% if course.title %} - {{ course.title }}{% endif %}
+          </a>
+        {% endfor %}
+      </div>
     </aside>
 
     <!-- Main Content -->
