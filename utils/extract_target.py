@@ -4,7 +4,7 @@ import google.generativeai as genai
 
 # 🔐 Setup Gemini
 genai.configure(api_key=os.environ.get("api_key"))
-model = genai.GenerativeModel("models/gemini-pro")
+model = genai.GenerativeModel("gemini-2.0-flash")
 
 def load_data():
     with open("data/csce_professors.json") as f:

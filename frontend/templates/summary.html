@@ -2,33 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>{{ subject }} Summary | Aggie Course Navigator</title>
+  <title>Summary | Aggie Course Navigator</title>
   <link rel="stylesheet" href="/static/style.css" />
+  <style>
+    .search-bar-top {
+      margin: 20px auto;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .search-bar-top form {
+      display: flex;
+      gap: 8px;
+      max-width: 700px;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .summary-box {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      font-size: 1.05rem;
+      white-space: pre-wrap;
+    }
+  </style>
 </head>
 <body>
   <div class="layout">
 
     <!-- Sidebar -->
     <aside class="sidebar">
-      <h2>Subjects</h2>
+      <h2>CSCE Courses</h2>
       <div class="subject-scroll">
-        {% for subj in subjects %}
-          <a href="/subject/{{ subj.code }}">{{ subj.code }}</a>
+        {% for course in courses %}
+          {% if course %}
+            <a href="{{ url_for('summary_page', matched_type='course', match=course, query=course) }}">
+              {{ course }}
+            </a>
+          {% endif %}
         {% endfor %}
       </div>
     </aside>
 
     <!-- Main content -->
     <main class="main-content">
+      <!-- Search Bar (above summary) -->
+      <div class="search-bar-top">
+        <form action="/search" method="POST">
+          <input 
+            type="text" 
+            name="query" 
+            value="{{ query }}" 
+            placeholder="Ask anything about courses or professors..." 
+            class="search-input"
+            required
+          />
+          <button type="submit" class="send-button">Go</button>
+        </form>
+      </div>
+
       <header class="site-header">
-        <h1>{{ subject }} Summary</h1>
-        <p><em>Query:</em> "{{ query }}"</p>
+        <h1>📘 Summary</h1>
+        <p><em>You asked:</em> "{{ query }}"</p>
       </header>
 
-      <section style="white-space: pre-wrap; font-size: 1.1rem; background: white; padding: 20px; border-radius: 12px;">
+      <section class="summary-box">
         {{ summary }}
       </section>
     </main>
+
   </div>
 </body>
 </html>
