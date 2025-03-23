@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{{ subject }} Courses | Aggie Course Navigator</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="layout">
+
+    <!-- Sidebar (same as index) -->
+    <aside class="sidebar">
+        <h2>Subjects</h2>
+        <div class="subject-scroll">
+          {% for subj in subjects %}
+            <a href="/subject/{{ subj.code }}">{{ subj.code }}</a>
+          {% endfor %}
+        </div>
+      </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="site-header">
+        <h1>{{ subject }} Courses</h1>
+      </header>
+
+      <section class="subject-grid">
+        {% for course in courses %}
+          <div class="course-card">
+            <h3>{{ course.code }}</h3>
+            <p>{{ course.title }}</p>
+            <a href="#">View Details</a> <!-- Future /course/<code> link -->
+          </div>
+        {% endfor %}
+      </section>
+    </main>
+
+  </div>
+</body>
+</html>

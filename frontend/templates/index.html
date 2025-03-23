@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aggie Course Navigator</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>Subjects</h2>
+        <div class="subject-scroll">
+            {% for course in courses %}
+            <a href="/course/{{ course.code }}">
+                {{ course.code }}{% if course.title() %} - {{ course.title() }}{% endif %}
+              </a>
+              
+              
+          {% endfor %}
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="site-header">
+        <h1>🎓 Aggie Course Navigator</h1>
+      </header>
+
+      <section class="search-section">
+        <form action="/search" method="POST" style="width: 100%; display: flex; justify-content: center; gap: 8px;">
+          <input 
+            type="text" 
+            name="query" 
+            placeholder="Ask anything about courses or professors..." 
+            class="search-input"
+            required
+          />
+          <button type="submit" class="send-button">Go</button>
+        </form>
+      </section>
+
+      <section class="subject-grid">
+        <!-- Optional content like popular classes could go here -->
+      </section>
+    </main>
+
+  </div>
+</body>
+</html>
