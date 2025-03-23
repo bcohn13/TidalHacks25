@@ -1,7 +1,37 @@
 import speech_recognition as sr
 from pydub import AudioSegment
 import os
+import yt_dlp
+from google import genai
+from google.genai import types
+import httpx
 
+
+def download_audio_from_youtube(video_url, output_file):
+    # Set up options for yt-dlp to download the best audio
+    ydl_opts = {
+        'format': 'bestaudio/best',  # Get the best available audio
+        'outtmpl': 'downloaded_audio.%(ext)s',  # Output file name (without the extension)
+        'quiet': True  # Suppress download output
+    }
+    
+    # Download the audio using yt-dlp
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+        print("Downloading audio...")
+        ydl.download([video_url])
+
+    print("Download completed.")
+    audio = AudioSegment.from_file('downloaded_audio.webm', format="webm")
+        
+        # Export the audio to a .wav file
+    audio.export(output_file, format="wav")
+
+video_url = 'https://youtu.be/LOV_BwQfOqI?si=zGpO0jpMEXrryvWJ'  # Replace with your video URL
+output_file = "audio_output.wav"  # Desired output WAV file name
+
+download_audio_from_youtube(video_url, output_file)
+
+    # Convert the downloaded audio to WAV if it's not already in that format
 def transcribe_audio_from_chunks(file_path):
     # Initialize the recognizer
     recognizer = sr.Recognizer()
@@ -45,5 +75,5 @@ def transcribe_audio_from_chunks(file_path):
             print(f"Deleted temporary file: {chunk_file}")
 
 # Path to your WAV file
-audio_path = "path_to_your_audio.wav"
+audio_path = "audio_output.wav"
 transcribe_audio_from_chunks(audio_path)
