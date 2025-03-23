@@ -51,7 +51,7 @@ def analyze_with_gemini(comments, professor_name):
         """
         # Configure the model
         response = response = client.models.generate_content(
-                model="gemini-1.5-flash",
+                model="gemini-2.0-flash",
                 contents=[
                     comments_text,
                     prompt      # Add the text prompt
@@ -76,7 +76,7 @@ def gemini_sentiment_score(comment_text):
     try:
         prompt = f"Determine the sentiment of the following comment as an integer score. Return only the integer value.\nComment: {comment_text}"
         response = client.models.generate_content(
-            model="gemini-1.5-flash",
+            model="gemini-2.0-flash",
             contents=[prompt]
         )
         # Extract integer value from Gemini's response
@@ -233,87 +233,6 @@ def analyze_professor_from_input():
     results = analyze_professor_sentiment(professor_name)
     print_sentiment_results(results)
     return results
-
-
-    # Run the analysis on the list of university subreddits
-    print(f"Searching {len(university_subreddits)} university subreddits for mentions of {professor_name}...")
-    
-    # Initialize counters for progress reporting
-    total_subreddits = len(university_subreddits)
-    processed = 0
-    found_mentions = 0
-    all_comments = []
-    
-    for subreddit_name in university_subreddits:
-        processed += 1
-        print(f"[{processed}/{total_subreddits}] Searching r/{subreddit_name}...", end="", flush=True)
-        
-        try:
-            # Search the subreddit
-            subreddit = reddit.subreddit(subreddit_name)
-            
-            # Try two search approaches: professor name alone and with university name
-            search_terms = [professor_name]
-            if university_name:
-                # Try both full name and last name with university
-                last_name = professor_name.split()[-1]
-                if last_name != professor_name:
-                    search_terms.append(f"{last_name} {university_name}")
-            
-            # Search with each term
-            found_posts = False
-            for term in search_terms:
-                search_results = list(subreddit.search(term, limit=post_limit))
-                if search_results:
-                    found_posts = True
-                    found_mentions += 1
-                    print(f" Found {len(search_results)} posts mentioning '{term}'")
-                    
-                    # Process these posts
-                    for post in search_results:
-                        # Get comments
-                        post.comments.replace_more(limit=0)
-                        
-                        for comment in list(post.comments.list())[:comment_limit]:
-                            # Skip if comment has no body or is deleted
-                            if not hasattr(comment, 'body') or comment.body == '[deleted]':
-                                continue
-                                
-                            # Check if comment mentions professor
-                            if re.search(professor_name, comment.body, re.IGNORECASE):
-                                all_comments.append({
-                                    'text': comment.body,
-                                    'author': str(comment.author),
-                                    'score': comment.score,
-                                    'subreddit': subreddit_name,
-                                    'sentiment': SentimentIntensityAnalyzer().polarity_scores(comment.body)
-                                })
-            
-            if not found_posts:
-                print(" No relevant posts found")
-                
-        except Exception as e:
-            print(f" Error: {str(e)}")
-    
-    print(f"\nSearch complete. Found mentions in {found_mentions} out of {total_subreddits} university subreddits.")
-    print(f"Total relevant comments found: {len(all_comments)}")
-    
-    # Analyze comments with Gemini if we have enough
-    if len(all_comments) >= 3:
-        ai_analysis = analyze_with_gemini(all_comments, professor_name)
-        print("\n" + "="*80)
-        print("AI ANALYSIS OF COMMENTS FROM UNIVERSITY SUBREDDITS")
-        print("="*80)
-        print(textwrap.fill(ai_analysis, width=80))
-    
-    # Return a summary
-    return {
-        "professor_name": professor_name,
-        "university_name": university_name,
-        "subreddits_searched": total_subreddits,
-        "subreddits_with_mentions": found_mentions,
-        "comments": all_comments
-    }
 
 def university_subreddit_search_from_input():
     """Interactive function to search university subreddits for professor mentions"""

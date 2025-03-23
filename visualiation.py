@@ -19,9 +19,15 @@ else:
     gemini_available = False
     print("Gemini API key not found. AI-powered analysis will not be available.")
 
-def visualize_reddit_sentiments(professor_name):
-    # Get sentiment analysis results from redditAnalysisScraper
-    results = analyze_professor_sentiment(professor_name)
+def visualize_reddit_sentiments(professor_name, results=None, sentiment_breakdown_file=None, sentiment_distribution_file=None):
+    """
+    Generate visualizations for professor sentiment analysis and save to provided file objects.
+    If results are not provided, they will be fetched using analyze_professor_sentiment.
+    """
+    # Get sentiment analysis results if not provided
+    if results is None:
+        results = analyze_professor_sentiment(professor_name)
+    
     comments = results.get('all_comments', [])
     
     if not comments:
@@ -36,43 +42,76 @@ def visualize_reddit_sentiments(professor_name):
     labels = ['Positive', 'Negative', 'Neutral']
     counts = [positive, negative, neutral]
 
-    plt.figure(figsize=(10,6))
-    bars = plt.bar(labels, counts, color=['green','red','gray'])
-    plt.title(f"Sentiment Breakdown for {professor_name}")
-    plt.ylabel("Number of Comments")
-    
-    # Add count labels on top of bars
-    for bar in bars:
-        height = bar.get_height()
-        plt.text(bar.get_x() + bar.get_width()/2., height + 0.5,
-                f'{int(height)}', ha='center', va='bottom')
-    
-    # Add percentage labels inside or above bars
-    total = sum(counts)
-    if total > 0:  # Avoid division by zero
-        for i, bar in enumerate(bars):
+    # Create the sentiment breakdown visualization if requested
+    if sentiment_breakdown_file is not None:
+        # Create a larger figure for better spacing
+        plt.figure(figsize=(12, 8))
+        
+        # Increase spacing between bars
+        ax = plt.subplot(111)
+        bars = ax.bar(labels, counts, color=['green', 'red', 'gray'], width=0.6)
+        
+        # Customize title and labels
+        plt.title(f"Sentiment Breakdown for {professor_name}", fontsize=16, pad=20)
+        plt.ylabel("Number of Comments", fontsize=12)
+        
+        # Add count labels ABOVE the bars with more padding
+        for bar in bars:
             height = bar.get_height()
-            percentage = (counts[i] / total) * 100
-            if height > 0:  # Only add text if bar has height
-                y_pos = height / 2 if height > 3 else height + 0.5
-                plt.text(bar.get_x() + bar.get_width()/2., y_pos,
-                        f'{percentage:.1f}%', ha='center', va='center')
+            ax.text(bar.get_x() + bar.get_width()/2, height + 0.3, 
+                    f'{int(height)}', ha='center', va='bottom', fontsize=12, fontweight='bold')
+        
+        # Adjust y-axis to leave room for labels
+        max_count = max(counts)
+        plt.ylim(0, max_count * 1.2)
+        
+        # Add grid for better readability
+        plt.grid(axis='y', linestyle='--', alpha=0.7)
+        
+        # Ensure everything fits
+        plt.tight_layout()
+        
+        # Save to file object instead of disk file
+        plt.savefig(sentiment_breakdown_file, format='png')
+        plt.close()
     
-    plt.tight_layout()
-    plt.savefig('sentiment_breakdown.png')
-    plt.show()
+    # Create the sentiment distribution visualization if requested
+    if sentiment_distribution_file is not None:
+        # Improve the histogram visualization as well
+        sentiment_values = [c['sentiment'] for c in comments]
+        min_val = min(sentiment_values) if sentiment_values else 0
+        max_val = max(sentiment_values) if sentiment_values else 0
+        
+        plt.figure(figsize=(12, 8))
+        
+        # Determine appropriate bin width based on the range of values
+        range_vals = max_val - min_val
+        bin_count = min(range_vals + 2, 15)  # Cap at 15 bins for readability
+        
+        plt.hist(sentiment_values, bins=int(bin_count), 
+                 color='skyblue', edgecolor='black', alpha=0.8)
+                 
+        plt.title(f"Sentiment Score Distribution for {professor_name}", fontsize=16, pad=20)
+        plt.xlabel("Sentiment Score", fontsize=12)
+        plt.ylabel("Frequency", fontsize=12)
+        plt.grid(True, alpha=0.3)
+        
+        # Add mean line
+        mean_val = sum(sentiment_values) / len(sentiment_values) if sentiment_values else 0
+        plt.axvline(mean_val, color='red', linestyle='dashed', linewidth=2, 
+                    label=f'Mean: {mean_val:.2f}')
+        plt.legend()
+        
+        plt.tight_layout()
+        plt.savefig(sentiment_distribution_file, format='png')
+        plt.close()
     
-    # Add a score distribution histogram
-    sentiment_values = [c['sentiment'] for c in comments]
-    plt.figure(figsize=(10,6))
-    plt.hist(sentiment_values, bins=range(min(sentiment_values)-1, max(sentiment_values)+2), 
-             color='skyblue', edgecolor='black')
-    plt.title(f"Sentiment Score Distribution for {professor_name}")
-    plt.xlabel("Sentiment Score")
-    plt.ylabel("Frequency")
-    plt.grid(True, alpha=0.3)
-    plt.savefig('sentiment_distribution.png')
-    plt.show()
+    return {
+        'positive': positive,
+        'negative': negative,
+        'neutral': neutral,
+        'total': len(comments)
+    }
 
 def ai_viewer_test_difficulty(professor_name, negative_comments):
     """
