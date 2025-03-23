@@ -8,15 +8,14 @@ from google import genai
 from google.genai import types
 import textwrap
 
+client = genai.Client(api_key = os.environ.get('api_key'))
+
 # Download necessary NLTK data
 try:
     nltk.download('vader_lexicon', quiet=True)
 except:
     pass
 
-# Set up Reddit API credentials
-# You need to create a Reddit app at https://www.reddit.com/prefs/apps
-# and fill in these details
 reddit = praw.Reddit(
     client_id="pxDKTjqMU6pQXNfkhXWGkQ",
     client_secret="KX--8WzjC-y2bU9xc6y-vonLAwLUhQ",  # Fixed client secret (removed trailing 'T')
@@ -26,8 +25,6 @@ reddit = praw.Reddit(
 )
 
 # Verify we're in read-only mode which doesn't require username/password
-print(f"Running in read-only mode: {reddit.read_only}")
-
 def analyze_with_gemini(comments, professor_name):
     """Use Google's Gemini API to analyze and summarize professor comments"""
     if not comments:
@@ -52,7 +49,6 @@ def analyze_with_gemini(comments, professor_name):
         Keep your analysis factual and balanced, based only on the comments provided.
         If there are contradictory views, highlight these differences.
         """
-        client = genai.Client(api_key = os.environ.get('api_key'))
         # Configure the model
         response = response = client.models.generate_content(
                 model="gemini-1.5-flash",
@@ -70,9 +66,32 @@ def analyze_with_gemini(comments, professor_name):
         print(f"Error using Gemini API: {e}")
         return "AI-powered analysis unavailable due to an error. Falling back to standard analysis."
 
+# Add this new function for Gemini-based sentiment
+def gemini_sentiment_score(comment_text):
+    """
+    Use Gemini API to determine sentiment score as an integer.
+    Returns the integer score interpreted from the comment.
+    Assume force requesting into a professor's section is positive.
+    """
+    try:
+        prompt = f"Determine the sentiment of the following comment as an integer score. Return only the integer value.\nComment: {comment_text}"
+        response = client.models.generate_content(
+            model="gemini-1.5-flash",
+            contents=[prompt]
+        )
+        # Extract integer value from Gemini's response
+        match = re.search(r'(-?\d+)', response.text)
+        if match:
+            return int(match.group(1))
+        else:
+            return 0
+    except Exception as e:
+        print(f"Gemini sentiment error: {e}")
+        return 0
+
 def analyze_professor_sentiment(professor_name, subreddits=None, post_limit=25, comment_limit=100):
     """Analyze sentiment about a professor across Reddit posts and comments."""
-    # Initialize sentiment analyzer
+    # Initialize sentiment analyzer (kept for fallback if needed)
     analyzer = SentimentIntensityAnalyzer()
     
     # Default to education-related subreddits if none specified
@@ -89,7 +108,6 @@ def analyze_professor_sentiment(professor_name, subreddits=None, post_limit=25, 
     # Search each subreddit for mentions of the professor
     for subreddit_name in subreddits:
         try:
-            print(f"Searching r/{subreddit_name} for mentions of '{professor_name}'...")
             subreddit = reddit.subreddit(subreddit_name)
             search_results = list(subreddit.search(professor_name, limit=post_limit))
             
@@ -118,12 +136,13 @@ def analyze_professor_sentiment(professor_name, subreddits=None, post_limit=25, 
                             
                         # Check if comment mentions professor name
                         if re.search(professor_name, comment.body, re.IGNORECASE):
-                            comment_sentiment = analyzer.polarity_scores(comment.body)
+                            # Use Gemini to determine sentiment as an integer
+                            gemini_score = gemini_sentiment_score(comment.body)
                             comment_info = {
                                 'text': comment.body,
                                 'author': str(comment.author),
                                 'score': comment.score,
-                                'sentiment': comment_sentiment
+                                'sentiment': gemini_score
                             }
                             
                             post_info['comments'].append(comment_info)
@@ -137,23 +156,20 @@ def analyze_professor_sentiment(professor_name, subreddits=None, post_limit=25, 
         except Exception as e:
             print(f"Error processing subreddit {subreddit_name}: {str(e)}")
     
-    # Calculate overall sentiment
+    # Calculate overall sentiment - adjusted for integer scores
     if all_comments:
-        compound_scores = [c['sentiment']['compound'] for c in all_comments]
-        positive_scores = [c['sentiment']['pos'] for c in all_comments]
-        negative_scores = [c['sentiment']['neg'] for c in all_comments]
+        # Since sentiment is now an integer, we can directly average them
+        sentiment_scores = [c['sentiment'] for c in all_comments]
         
         overall_sentiment = {
-            'compound_avg': sum(compound_scores) / len(compound_scores),
-            'positive_avg': sum(positive_scores) / len(positive_scores),
-            'negative_avg': sum(negative_scores) / len(negative_scores),
-            'comment_count': len(all_comments),
+            'average_score': sum(sentiment_scores) / len(sentiment_scores),
+            'comment_count': len(sentiment_scores),
         }
         
         # Interpret the sentiment
-        if overall_sentiment['compound_avg'] >= 0.05:
+        if overall_sentiment['average_score'] > 0:
             overall_sentiment['interpretation'] = 'Positive'
-        elif overall_sentiment['compound_avg'] <= -0.05:
+        elif overall_sentiment['average_score'] < 0:
             overall_sentiment['interpretation'] = 'Negative'
         else:
             overall_sentiment['interpretation'] = 'Neutral'
@@ -163,7 +179,7 @@ def analyze_professor_sentiment(professor_name, subreddits=None, post_limit=25, 
             ai_analysis = analyze_with_gemini(all_comments, professor_name)
             overall_sentiment['ai_analysis'] = ai_analysis
         else:
-            overall_sentiment['ai_analysis'] = "Not enough comments for AI-powered analysis or Gemini API not available."
+            overall_sentiment['ai_analysis'] = "Not enough comments for AI-powered analysis."
     else:
         overall_sentiment = {
             'interpretation': 'No data found',
@@ -179,7 +195,7 @@ def analyze_professor_sentiment(professor_name, subreddits=None, post_limit=25, 
     }
 
 def print_sentiment_results(results):
-    """Print a summary of the sentiment analysis results."""
+    """Print a summary of the sentiment analysis results without individual comments."""
     professor = results['professor_name']
     sentiment = results['overall_sentiment']
     
@@ -191,41 +207,24 @@ def print_sentiment_results(results):
         print(f"No comments found mentioning {professor}.")
         return
     
-    # Basic sentiment stats
+    # Display only the statistical summary
     print(f"Comments analyzed: {sentiment['comment_count']}")
     print(f"Overall sentiment: {sentiment['interpretation']}")
-    print(f"Compound Score: {sentiment['compound_avg']:.3f}")
-    print(f"Positive Score: {sentiment['positive_avg']:.3f}")
-    print(f"Negative Score: {sentiment['negative_avg']:.3f}")
+    print(f"Average Score: {sentiment.get('average_score', 0):.2f}")
     
-    # Print AI analysis if available
+    # Calculate additional statistics
+    if results['all_comments']:
+        scores = [c['sentiment'] for c in results['all_comments']]
+        print(f"Highest sentiment score: {max(scores)}")
+        print(f"Lowest sentiment score: {min(scores)}")
+        print(f"Sentiment score range: {max(scores) - min(scores)}")
+    
+    # Print AI analysis if available (keeping this as it provides a summary without showing actual comments)
     if 'ai_analysis' in sentiment and sentiment['ai_analysis']:
         print(f"\n{'='*80}")
         print(f"AI-POWERED ANALYSIS")
         print(f"{'='*80}")
         print(textwrap.fill(sentiment['ai_analysis'], width=80))
-    
-    # Print sample comments
-    print(f"\n{'='*80}")
-    print(f"SAMPLE COMMENTS")
-    print(f"{'='*80}")
-    
-    if results['all_comments']:
-        sorted_comments = sorted(results['all_comments'], 
-                               key=lambda x: x['sentiment']['compound'], 
-                               reverse=True)
-        
-        print("\nMost positive comments:")
-        for comment in sorted_comments[:3]:
-            print(f"Score: {comment['sentiment']['compound']:.3f}")
-            print(f"Comment: {comment['text'][:100]}...")
-            print("-" * 40)
-        
-        print("\nMost negative comments:")
-        for comment in sorted_comments[-3:]:
-            print(f"Score: {comment['sentiment']['compound']:.3f}")
-            print(f"Comment: {comment['text'][:100]}...")
-            print("-" * 40)
 
 def analyze_professor_from_input():
     """Get professor name from user and run analysis"""
@@ -323,10 +322,7 @@ def university_subreddit_search_from_input():
     
     if not university_name:
         university_name = None
-        
-    # Run the search
-    results = search_university_subreddits(professor_name, university_name)
-    
+            
     # Display a summary
     print("\nSEARCH SUMMARY:")
     print(f"Professor: {results['professor_name']}")
