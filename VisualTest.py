@@ -32,7 +32,7 @@ def download_audio_from_youtube(video_url, output_file):
         # Export the audio to a .wav file
     audio.export(output_file, format="wav")
 
-video_url = 'https://youtu.be/k6U-i4gXkLM?si=0Q9UVMtRWm7fajjb'  # Replace with your video URL
+video_url = 'https://youtu.be/SHxOQd6VTp4?si=WSdG1LygWfZcztGv'  # Replace with your video URL
 output_file = "audio_output.wav"  # Desired output WAV file name
 
 download_audio_from_youtube(video_url, output_file)
@@ -88,7 +88,18 @@ def transcribe_audio_from_chunks(file_path):
 audio_path = "audio_output.wav"
 data=transcribe_audio_from_chunks(audio_path)
 
-prompt = "From the audio transcript, Display the format the you think would be appropriate"
+prompt = "From the audio transcript, Display the format the you think would be appropriate and the data itself as a string in the format: \
+graph_type:<graph type that would be appropriate>\
+x_column:category \
+y_column:value \
+data: \
+category,value \
+A,10 \
+B,25 \
+C,15 \
+D,30  \
+Display noting else but the string above. The graph type must be a seaborn graph type: barplot,lineplot ect.\
+"
 
 # Use both documents in the API call
 
@@ -100,86 +111,46 @@ response = client.models.generate_content(
   ])
 
 print(response.text)
-def generate_graph_from_prompt(response, model_name="gemini-pro"):
-    """
-    Generates a graph using Gemini and Matplotlib/Seaborn based on a user prompt.
-    """
-    try:
-        
 
-        #Check if the response is a string, which indicates an error
-        if isinstance(response, str):
-            return f"Gemini API Error: {response}"
 
-        # Check if response.parts exists and is not empty.
-        if hasattr(response, "parts") and response.parts:
-            data_str = "".join([part.text for part in response.parts if hasattr(part, 'text') and part.text]) # handle if part.text exists.
+def parse_and_plot(input_string):
+    """Parses the input string and generates a Seaborn/Matplotlib plot."""
+
+    parts = input_string.split("data:")
+    metadata = parts[0].strip().split("\n")
+    data_csv = parts[1].strip()
+
+    metadata_dict = {}
+    for item in metadata:
+        key, value = item.split(":")
+        metadata_dict[key.strip()] = value.strip()
+
+    graph_type = metadata_dict.get("graph_type", "line") # default to line graph if no type specified.
+    x_col = metadata_dict.get("x_column")
+    y_col = metadata_dict.get("y_column")
+
+    df = pd.read_csv(io.StringIO(data_csv))
+
+    plt.figure(figsize=(8, 6))
+
+    if graph_type == "bar":
+        sns.barplot(x=x_col, y=y_col, data=df)
+    elif graph_type == "line":
+        sns.lineplot(x=x_col, y=y_col, data=df)
+    elif graph_type == "scatter":
+        sns.scatterplot(x=x_col, y=y_col, data=df)
+    elif graph_type == "hist":
+        if y_col:
+            sns.histplot(data=df[y_col])
         else:
-            return "Gemini API Error: No data received from the model."
-
-        graph_type = "line"
-        x_col = None
-        y_col = None
-        "bar-"
-        if "bar" in prompt.lower():
-            graph_type = "bar"
-        elif "scatter" in prompt.lower():
-            graph_type = "scatter"
-        elif "histogram" in prompt.lower() or "hist" in prompt.lower():
-            graph_type = "hist"
-
-        if "x=" in prompt.lower():
-            x_col = prompt.lower().split("x=")[1].split()[0].strip()
-        if "y=" in prompt.lower():
-            y_col = prompt.lower().split("y=")[1].split()[0].strip()
-
-        try:
-            df = pd.read_csv(io.StringIO(data_str))
-        except:
-            df = pd.read_csv(io.StringIO(data_str), sep='\s+')
-
-        plt.figure(figsize=(8, 6))
-
-        if graph_type == "line":
-            if x_col and y_col:
-                sns.lineplot(x=x_col, y=y_col, data=df)
-            else:
-                sns.lineplot(data=df)
-        elif graph_type == "bar":
-            if x_col and y_col:
-                sns.barplot(x=x_col, y=y_col, data=df)
-            else:
-                sns.barplot(data=df)
-        elif graph_type == "scatter":
-            if x_col and y_col:
-                sns.scatterplot(x=x_col, y=y_col, data=df)
-            else:
-                sns.scatterplot(data=df)
-        elif graph_type == "hist":
-            if y_col:
-                sns.histplot(data=df[y_col])
-            else:
-                sns.histplot(data=df)
-
-        plt.title("Generated Graph")
-        plt.xlabel(x_col if x_col else "")
-        plt.ylabel(y_col if y_col else "")
-
-        img_buffer = io.BytesIO()
-        plt.savefig(img_buffer, format='png')
-        img_buffer.seek(0)
-        img_base64 = base64.b64encode(img_buffer.getvalue()).decode()
-        plt.close()
-        return img_base64
-
-    except Exception as e:
-        return f"An error occurred: {e}"
-
-def display_graph(base64_image):
-    if base64_image and not base64_image.startswith("Gemini API Error") and not base64_image.startswith("An error occurred"):
-        display(HTML(f'<img src="data:image/png;base64,{base64_image}" />'))
+            sns.histplot(data=df)
     else:
-        print(base64_image)
-image=generate_graph_from_prompt(response)
+        print("Invalid graph type.")
+        return
 
-display_graph(image)
+    plt.title("Generated Graph")
+    plt.xlabel(x_col)
+    plt.ylabel(y_col)
+    plt.show()
+
+parse_and_plot(response.text)
