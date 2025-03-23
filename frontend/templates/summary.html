@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ subject }} Summary | Aggie Course Navigator</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Subjects</h2>
+      <div class="subject-scroll">
+        {% for subj in subjects %}
+          <a href="/subject/{{ subj.code }}">{{ subj.code }}</a>
+        {% endfor %}
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <header class="site-header">
+        <h1>{{ subject }} Summary</h1>
+        <p><em>Query:</em> "{{ query }}"</p>
+      </header>
+
+      <section style="white-space: pre-wrap; font-size: 1.1rem; background: white; padding: 20px; border-radius: 12px;">
+        {{ summary }}
+      </section>
+    </main>
+  </div>
+</body>
+</html>

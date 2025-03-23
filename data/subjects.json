@@ -1,0 +1,1510 @@
+[
+  {
+    "code": "AALO",
+    "name": "AALO -\u200b Arabic &\u200b Asian Language (AALO)"
+  },
+  {
+    "code": "ACCT",
+    "name": "ACCT -\u200b Accounting (ACCT)"
+  },
+  {
+    "code": "AERO",
+    "name": "AERO -\u200b Aerospace Engineering (AERO)"
+  },
+  {
+    "code": "AERS",
+    "name": "AERS -\u200b Aerospace Studies (AERS)"
+  },
+  {
+    "code": "AFST",
+    "name": "AFST -\u200b Africana Studies (AFST)"
+  },
+  {
+    "code": "AGCJ",
+    "name": "AGCJ -\u200b Ag Comm &\u200b Journalism (AGCJ)"
+  },
+  {
+    "code": "AGEC",
+    "name": "AGEC -\u200b Agricultural Economics (AGEC)"
+  },
+  {
+    "code": "AGLS",
+    "name": "AGLS -\u200b Ag &\u200b Life Sciences (AGLS)"
+  },
+  {
+    "code": "AGSC",
+    "name": "AGSC -\u200b Agricultural Science (AGSC)"
+  },
+  {
+    "code": "AGSM",
+    "name": "AGSM -\u200b Agricultrl Systems Mgmt (AGSM)"
+  },
+  {
+    "code": "ALEC",
+    "name": "ALEC -\u200b Ag Leadrshp, Ed &\u200b Comm (ALEC)"
+  },
+  {
+    "code": "ALED",
+    "name": "ALED -\u200b Ag Leadership &\u200b Dev (ALED)"
+  },
+  {
+    "code": "ANSC",
+    "name": "ANSC -\u200b Animal Science (ANSC)"
+  },
+  {
+    "code": "ANTH",
+    "name": "ANTH -\u200b Anthropology (ANTH)"
+  },
+  {
+    "code": "ARAB",
+    "name": "ARAB -\u200b Arabic (ARAB)"
+  },
+  {
+    "code": "ARCH",
+    "name": "ARCH -\u200b Architecture (ARCH)"
+  },
+  {
+    "code": "AREN",
+    "name": "AREN -\u200b Architectural Engr (AREN)"
+  },
+  {
+    "code": "ARSC",
+    "name": "ARSC -\u200b Arts &\u200b Sciences (ARSC)"
+  },
+  {
+    "code": "ARTS",
+    "name": "ARTS -\u200b Art (ARTS)"
+  },
+  {
+    "code": "ASCC",
+    "name": "ASCC -\u200b Academic Success Center (ASCC)"
+  },
+  {
+    "code": "ASIA",
+    "name": "ASIA -\u200b Asian Studies (ASIA)"
+  },
+  {
+    "code": "ASTR",
+    "name": "ASTR -\u200b Astronomy (ASTR)"
+  },
+  {
+    "code": "ATMO",
+    "name": "ATMO -\u200b Atmospheric Sciences (ATMO)"
+  },
+  {
+    "code": "ATTR",
+    "name": "ATTR -\u200b Athletic Training (ATTR)"
+  },
+  {
+    "code": "BAEN",
+    "name": "BAEN -\u200b Biological &\u200b Ag Engr (BAEN)"
+  },
+  {
+    "code": "BEFB",
+    "name": "BEFB -\u200b Bilingual Ed Field Based (BEFB)"
+  },
+  {
+    "code": "BESC",
+    "name": "BESC -\u200b Bioenvironmental Sci (BESC)"
+  },
+  {
+    "code": "BICH",
+    "name": "BICH -\u200b Biochemistry (BICH)"
+  },
+  {
+    "code": "BIMS",
+    "name": "BIMS -\u200b Biomedical Science (BIMS)"
+  },
+  {
+    "code": "BIOL",
+    "name": "BIOL -\u200b Biology (BIOL)"
+  },
+  {
+    "code": "BMEN",
+    "name": "BMEN -\u200b Biomedical Engineering (BMEN)"
+  },
+  {
+    "code": "BOTN",
+    "name": "BOTN -\u200b Botany (BOTN)"
+  },
+  {
+    "code": "BUSH",
+    "name": "BUSH -\u200b Geo Bush School of Gov (BUSH)"
+  },
+  {
+    "code": "BUSN",
+    "name": "BUSN -\u200b Mays Business School (BUSN)"
+  },
+  {
+    "code": "CARC",
+    "name": "CARC -\u200b College of Architecture (CARC)"
+  },
+  {
+    "code": "CEHD",
+    "name": "CEHD -\u200b Coll of Ed &\u200b Human Dev (CEHD)"
+  },
+  {
+    "code": "CHEM",
+    "name": "CHEM -\u200b Chemistry (CHEM)"
+  },
+  {
+    "code": "CHEN",
+    "name": "CHEN -\u200b Chemical Engineering (CHEN)"
+  },
+  {
+    "code": "CHIN",
+    "name": "CHIN -\u200b Chinese (CHIN)"
+  },
+  {
+    "code": "CLAS",
+    "name": "CLAS -\u200b Classics (CLAS)"
+  },
+  {
+    "code": "CLEN",
+    "name": "CLEN -\u200b College of Engineering (CLEN)"
+  },
+  {
+    "code": "COMM",
+    "name": "COMM -\u200b Communication (COMM)"
+  },
+  {
+    "code": "COSC",
+    "name": "COSC -\u200b Construction Science (COSC)"
+  },
+  {
+    "code": "CSCE",
+    "name": "CSCE -\u200b Computer Sci &\u200b Engr (CSCE)"
+  },
+  {
+    "code": "CULN",
+    "name": "CULN -\u200b Culinology (CULN)"
+  },
+  {
+    "code": "CVEN",
+    "name": "CVEN -\u200b Civil Engineering (CVEN)"
+  },
+  {
+    "code": "CYBR",
+    "name": "CYBR -\u200b Cybersecurity (CYBR)"
+  },
+  {
+    "code": "DAEN",
+    "name": "DAEN -\u200b Data Engineering (DAEN)"
+  },
+  {
+    "code": "DASC",
+    "name": "DASC -\u200b Dairy Science (DASC)"
+  },
+  {
+    "code": "DCED",
+    "name": "DCED -\u200b Dance Education (DCED)"
+  },
+  {
+    "code": "DDHS",
+    "name": "DDHS -\u200b Dental Hygiene (DDHS)"
+  },
+  {
+    "code": "DIVE",
+    "name": "DIVE -\u200b Diving Tech and Methods (DIVE)"
+  },
+  {
+    "code": "ECCB",
+    "name": "ECCB -\u200b Eco &\u200b Conservation Biol (ECCB)"
+  },
+  {
+    "code": "ECDE",
+    "name": "ECDE -\u200b Early Chldhd Devl &\u200b Educ (ECDE)"
+  },
+  {
+    "code": "ECEN",
+    "name": "ECEN -\u200b Electrical &\u200b Comp Engr (ECEN)"
+  },
+  {
+    "code": "ECHE",
+    "name": "ECHE -\u200b Early Chldhd Ed Fld Based (ECHE)"
+  },
+  {
+    "code": "ECMT",
+    "name": "ECMT -\u200b Econometrics (ECMT)"
+  },
+  {
+    "code": "ECON",
+    "name": "ECON -\u200b Economics (ECON)"
+  },
+  {
+    "code": "EDCI",
+    "name": "EDCI -\u200b Educ Curriculum &\u200b Dev (EDCI)"
+  },
+  {
+    "code": "EHRD",
+    "name": "EHRD -\u200b Ed Human Res Develop (EHRD)"
+  },
+  {
+    "code": "ENDG",
+    "name": "ENDG -\u200b Engr Design Graphics (ENDG)"
+  },
+  {
+    "code": "ENDS",
+    "name": "ENDS -\u200b Environmental Design (ENDS)"
+  },
+  {
+    "code": "ENGL",
+    "name": "ENGL -\u200b English (ENGL)"
+  },
+  {
+    "code": "ENGR",
+    "name": "ENGR -\u200b Engineering (ENGR)"
+  },
+  {
+    "code": "ENST",
+    "name": "ENST-\u200bEnvironmental Studies (ENST)"
+  },
+  {
+    "code": "ENTC",
+    "name": "ENTC -\u200b Engineering Technology (ENTC)"
+  },
+  {
+    "code": "ENTO",
+    "name": "ENTO -\u200b Entomology (ENTO)"
+  },
+  {
+    "code": "EPFB",
+    "name": "EPFB -\u200b Educ Psyc Field Based (EPFB)"
+  },
+  {
+    "code": "EPSY",
+    "name": "EPSY -\u200b Educational Psychology (EPSY)"
+  },
+  {
+    "code": "ESET",
+    "name": "ESET -\u200b Electronic Sys Eng Tech (ESET)"
+  },
+  {
+    "code": "EURO",
+    "name": "EURO -\u200b European Studies (EURO)"
+  },
+  {
+    "code": "EVEN",
+    "name": "EVEN -\u200b Environmental Engr (EVEN)"
+  },
+  {
+    "code": "FILM",
+    "name": "FILM -\u200b Film Studies (FILM)"
+  },
+  {
+    "code": "FINC",
+    "name": "FINC -\u200b Finance (FINC)"
+  },
+  {
+    "code": "FINP",
+    "name": "FINP -\u200b Financial Planning (FINP)"
+  },
+  {
+    "code": "FIVS",
+    "name": "FIVS -\u200b Forensic &\u200b Inv Science (FIVS)"
+  },
+  {
+    "code": "FREN",
+    "name": "FREN -\u200b French (FREN)"
+  },
+  {
+    "code": "FSCI",
+    "name": "FSCI -\u200b Foundational Sciences (FSCI)"
+  },
+  {
+    "code": "FSTC",
+    "name": "FSTC -\u200b Food Science &\u200b Tech (FSTC)"
+  },
+  {
+    "code": "FYEX",
+    "name": "FYEX -\u200b First Year Experience (FYEX)"
+  },
+  {
+    "code": "GALV",
+    "name": "GALV -\u200b TAMUG Study Abroad (GALV)"
+  },
+  {
+    "code": "GENE",
+    "name": "GENE -\u200b Genetics (GENE)"
+  },
+  {
+    "code": "GEOG",
+    "name": "GEOG -\u200b Geography (GEOG)"
+  },
+  {
+    "code": "GEOL",
+    "name": "GEOL -\u200b Geology (GEOL)"
+  },
+  {
+    "code": "GEOP",
+    "name": "GEOP -\u200b Geophysics (GEOP)"
+  },
+  {
+    "code": "GEOS",
+    "name": "GEOS -\u200b Geosciences (GEOS)"
+  },
+  {
+    "code": "GERM",
+    "name": "GERM -\u200b German (GERM)"
+  },
+  {
+    "code": "GLST",
+    "name": "GLST -\u200b Global Studies (GLST)"
+  },
+  {
+    "code": "HBRW",
+    "name": "HBRW -\u200b Hebrew (HBRW)"
+  },
+  {
+    "code": "HEFB",
+    "name": "HEFB -\u200b Health Ed Field Based (HEFB)"
+  },
+  {
+    "code": "HHUM",
+    "name": "HHUM -\u200b Health Humanities (HHUM)"
+  },
+  {
+    "code": "HISP",
+    "name": "HISP -\u200b Hispanic Studies (HISP)"
+  },
+  {
+    "code": "HIST",
+    "name": "HIST -\u200b History (HIST)"
+  },
+  {
+    "code": "HLTH",
+    "name": "HLTH -\u200b Health (HLTH)"
+  },
+  {
+    "code": "HMGT",
+    "name": "HMGT -\u200b Hosp, Hotel Mgmt, Tour (HMGT)"
+  },
+  {
+    "code": "HORT",
+    "name": "HORT -\u200b Horticultural Sciences (HORT)"
+  },
+  {
+    "code": "HUMA",
+    "name": "HUMA -\u200b Humanities (HUMA)"
+  },
+  {
+    "code": "IBUS",
+    "name": "IBUS -\u200b International Business (IBUS)"
+  },
+  {
+    "code": "IDIS",
+    "name": "IDIS -\u200b Industrial Distribution (IDIS)"
+  },
+  {
+    "code": "INST",
+    "name": "INST -\u200b Interdisciplinary Studies (INST)"
+  },
+  {
+    "code": "INTA",
+    "name": "INTA -\u200b International Affairs (INTA)"
+  },
+  {
+    "code": "ISEN",
+    "name": "ISEN -\u200b Indust &\u200b Systems Engr (ISEN)"
+  },
+  {
+    "code": "ISTM",
+    "name": "ISTM -\u200b Mgmt Info Systems (ISTM)"
+  },
+  {
+    "code": "ITAL",
+    "name": "ITAL -\u200b Italian (ITAL)"
+  },
+  {
+    "code": "ITDE",
+    "name": "ITDE -\u200b Interdisciplinary Engr (ITDE)"
+  },
+  {
+    "code": "ITSV",
+    "name": "ITSV -\u200b Info Tech Service Mgmt (ITSV)"
+  },
+  {
+    "code": "JAPN",
+    "name": "JAPN -\u200b Japanese (JAPN)"
+  },
+  {
+    "code": "JOUR",
+    "name": "JOUR -\u200b Journalism (JOUR)"
+  },
+  {
+    "code": "JWST",
+    "name": "JWST -\u200b Jewish Studies (JWST)"
+  },
+  {
+    "code": "KINE",
+    "name": "KINE -\u200b Kinesiology (KINE)"
+  },
+  {
+    "code": "KNFB",
+    "name": "KNFB -\u200b Kinesiology Field Based (KNFB)"
+  },
+  {
+    "code": "LAND",
+    "name": "LAND -\u200b Landscape Architecture (LAND)"
+  },
+  {
+    "code": "LING",
+    "name": "LING -\u200b Linguistics (LING)"
+  },
+  {
+    "code": "LMAS",
+    "name": "LMAS -\u200b Latino/\u200bMex Amer Studies (LMAS)"
+  },
+  {
+    "code": "MARA",
+    "name": "MARA -\u200b Maritime Administration (MARA)"
+  },
+  {
+    "code": "MARB",
+    "name": "MARB -\u200b Marine Biology (MARB)"
+  },
+  {
+    "code": "MARE",
+    "name": "MARE -\u200b Marine Engr Technology (MARE)"
+  },
+  {
+    "code": "MARR",
+    "name": "MARR -\u200b Marine Engr Technology (MARR)"
+  },
+  {
+    "code": "MARS",
+    "name": "MARS -\u200b Marine Science (MARS)"
+  },
+  {
+    "code": "MART",
+    "name": "MART -\u200b Marine Transportation (MART)"
+  },
+  {
+    "code": "MASC",
+    "name": "MASC -\u200b Integrated Math &\u200b Sci (MASC)"
+  },
+  {
+    "code": "MASE",
+    "name": "MASE -\u200b Maritime Systems Engr (MASE)"
+  },
+  {
+    "code": "MAST",
+    "name": "MAST -\u200b Maritime Studies (MAST)"
+  },
+  {
+    "code": "MATH",
+    "name": "MATH -\u200b Mathematics (MATH)"
+  },
+  {
+    "code": "MEEN",
+    "name": "MEEN -\u200b Mechanical Engineering (MEEN)"
+  },
+  {
+    "code": "MEFB",
+    "name": "MEFB -\u200b Mid Grds Ed Field Based (MEFB)"
+  },
+  {
+    "code": "MEPS",
+    "name": "MEPS -\u200b Molecular &\u200b Env Plant Sci (MEPS)"
+  },
+  {
+    "code": "MGMT",
+    "name": "MGMT -\u200b Management (MGMT)"
+  },
+  {
+    "code": "MICR",
+    "name": "MICR -\u200b Microbiology (MICR)"
+  },
+  {
+    "code": "MKTG",
+    "name": "MKTG -\u200b Marketing (MKTG)"
+  },
+  {
+    "code": "MLSC",
+    "name": "MLSC -\u200b Military Science (MLSC)"
+  },
+  {
+    "code": "MMET",
+    "name": "MMET -\u200b Mfg &\u200b Mech Engr Tech (MMET)"
+  },
+  {
+    "code": "MODL",
+    "name": "MODL -\u200b Modern Languages (MODL)"
+  },
+  {
+    "code": "MSEN",
+    "name": "MSEN -\u200b Materials Science &\u200b Engr (MSEN)"
+  },
+  {
+    "code": "MSTC",
+    "name": "MSTC -\u200b Music Technology (MSTC)"
+  },
+  {
+    "code": "MTDE",
+    "name": "MTDE -\u200b Multidisciplinary Engr (MTDE)"
+  },
+  {
+    "code": "MUSC",
+    "name": "MUSC -\u200b Music (MUSC)"
+  },
+  {
+    "code": "MUST",
+    "name": "MUST -\u200b Museum Studies (MUST)"
+  },
+  {
+    "code": "MXET",
+    "name": "MXET -\u200b Multidiscip Engr Tech (MXET)"
+  },
+  {
+    "code": "NAUT",
+    "name": "NAUT -\u200b Nautical Science (NAUT)"
+  },
+  {
+    "code": "NRSC",
+    "name": "NRSC -\u200b Neuroscience (NRSC)"
+  },
+  {
+    "code": "NUEN",
+    "name": "NUEN -\u200b Nuclear Engineering (NUEN)"
+  },
+  {
+    "code": "NURS",
+    "name": "NURS -\u200b Nursing (NURS)"
+  },
+  {
+    "code": "NUTR",
+    "name": "NUTR -\u200b Nutrition (NUTR)"
+  },
+  {
+    "code": "NVSC",
+    "name": "NVSC -\u200b Naval Science (NVSC)"
+  },
+  {
+    "code": "OCEN",
+    "name": "OCEN -\u200b Ocean Engineering (OCEN)"
+  },
+  {
+    "code": "OCNG",
+    "name": "OCNG -\u200b Oceanography (OCNG)"
+  },
+  {
+    "code": "PBSI",
+    "name": "PBSI -\u200b Psyc &\u200b Brain Sciences (PBSI)"
+  },
+  {
+    "code": "PERF",
+    "name": "PERF -\u200b Performance Studies (PERF)"
+  },
+  {
+    "code": "PETE",
+    "name": "PETE -\u200b Petroleum Engineering (PETE)"
+  },
+  {
+    "code": "PHIL",
+    "name": "PHIL -\u200b Philosophy (PHIL)"
+  },
+  {
+    "code": "PHLT",
+    "name": "PHLT -\u200b Public Health (PHLT)"
+  },
+  {
+    "code": "PHYS",
+    "name": "PHYS -\u200b Physics (PHYS)"
+  },
+  {
+    "code": "PLPA",
+    "name": "PLPA -\u200b Plant Pathology (PLPA)"
+  },
+  {
+    "code": "POLS",
+    "name": "POLS -\u200b Political Science (POLS)"
+  },
+  {
+    "code": "PORT",
+    "name": "PORT -\u200b Portuguese (PORT)"
+  },
+  {
+    "code": "POSC",
+    "name": "POSC -\u200b Poultry Science (POSC)"
+  },
+  {
+    "code": "PVFA",
+    "name": "PVFA -\u200b Perf Vis Fine Arts (PVFA)"
+  },
+  {
+    "code": "RDNG",
+    "name": "RDNG -\u200b Reading (RDNG)"
+  },
+  {
+    "code": "RELS",
+    "name": "RELS -\u200b Religious Studies (RELS)"
+  },
+  {
+    "code": "RPTS",
+    "name": "RPTS -\u200b Rec, Park &\u200b Tourism Sci (RPTS)"
+  },
+  {
+    "code": "RUSS",
+    "name": "RUSS -\u200b Russian (RUSS)"
+  },
+  {
+    "code": "RWFM",
+    "name": "RWFM -\u200b Rang Wild &\u200b Fish Mgmt (RWFM)"
+  },
+  {
+    "code": "SCMT",
+    "name": "SCMT -\u200b Supply Chain Mgmt (SCMT)"
+  },
+  {
+    "code": "SCSC",
+    "name": "SCSC -\u200b Soil and Crop Sciences (SCSC)"
+  },
+  {
+    "code": "SEFB",
+    "name": "SEFB -\u200b Special Ed Field Based (SEFB)"
+  },
+  {
+    "code": "SENG",
+    "name": "SENG -\u200b Safety Engineering (SENG)"
+  },
+  {
+    "code": "SOCI",
+    "name": "SOCI -\u200b Sociology (SOCI)"
+  },
+  {
+    "code": "SOMS",
+    "name": "SOMS -\u200b Schl of Military Sciences (SOMS)"
+  },
+  {
+    "code": "SPAN",
+    "name": "SPAN -\u200b Spanish (SPAN)"
+  },
+  {
+    "code": "SPED",
+    "name": "SPED -\u200b Special Education (SPED)"
+  },
+  {
+    "code": "SPMT",
+    "name": "SPMT -\u200b Sport Management (SPMT)"
+  },
+  {
+    "code": "STAT",
+    "name": "STAT -\u200b Statistics (STAT)"
+  },
+  {
+    "code": "TCMG",
+    "name": "TCMG -\u200b Technology Management (TCMG)"
+  },
+  {
+    "code": "TEED",
+    "name": "TEED -\u200b Teacher Education (TEED)"
+  },
+  {
+    "code": "TEFB",
+    "name": "TEFB -\u200b Teacher Ed Field Based (TEFB)"
+  },
+  {
+    "code": "THEA",
+    "name": "THEA -\u200b Theatre (THEA)"
+  },
+  {
+    "code": "UGST",
+    "name": "UGST -\u200b Undergraduate Studies (UGST)"
+  },
+  {
+    "code": "URPN",
+    "name": "URPN -\u200b Urban &\u200b Reg Planning (URPN)"
+  },
+  {
+    "code": "VIBS",
+    "name": "VIBS -\u200b Vet Integrative Biosci (VIBS)"
+  },
+  {
+    "code": "VIST",
+    "name": "VIST -\u200b Visual Studies (VIST)"
+  },
+  {
+    "code": "VLCS",
+    "name": "VLCS -\u200b Vet Large Animal Clin Sc (VLCS)"
+  },
+  {
+    "code": "VSCS",
+    "name": "VSCS -\u200b Vet Small Animal Clin Sc (VSCS)"
+  },
+  {
+    "code": "VTPB",
+    "name": "VTPB -\u200b Veterinary Pathobiology (VTPB)"
+  },
+  {
+    "code": "VTPP",
+    "name": "VTPP -\u200b Vet Physiology &\u200b Pharm (VTPP)"
+  },
+  {
+    "code": "WFSC",
+    "name": "WFSC -\u200b Wildlife &\u200b Fisheries Sci (WFSC)"
+  },
+  {
+    "code": "WGST",
+    "name": "WGST -\u200b Women's &\u200b Gender Studies (WGST)"
+  },
+  {
+    "code": "ZOOL",
+    "name": "ZOOL -\u200b Zoology (ZOOL)"
+  },
+  {
+    "code": "AALO",
+    "name": "AALO - Arabic & Asian Language (AALO)"
+  },
+  {
+    "code": "ACCT",
+    "name": "ACCT - Accounting (ACCT)"
+  },
+  {
+    "code": "AERO",
+    "name": "AERO - Aerospace Engineering (AERO)"
+  },
+  {
+    "code": "AERS",
+    "name": "AERS - Aerospace Studies (AERS)"
+  },
+  {
+    "code": "AFST",
+    "name": "AFST - Africana Studies (AFST)"
+  },
+  {
+    "code": "AGCJ",
+    "name": "AGCJ - Ag Comm & Journalism (AGCJ)"
+  },
+  {
+    "code": "AGEC",
+    "name": "AGEC - Agricultural Economics (AGEC)"
+  },
+  {
+    "code": "AGLS",
+    "name": "AGLS - Ag & Life Sciences (AGLS)"
+  },
+  {
+    "code": "AGSC",
+    "name": "AGSC - Agricultural Science (AGSC)"
+  },
+  {
+    "code": "AGSM",
+    "name": "AGSM - Agricultrl Systems Mgmt (AGSM)"
+  },
+  {
+    "code": "ALEC",
+    "name": "ALEC - Ag Leadrshp, Ed & Comm (ALEC)"
+  },
+  {
+    "code": "ALED",
+    "name": "ALED - Ag Leadership & Dev (ALED)"
+  },
+  {
+    "code": "ANSC",
+    "name": "ANSC - Animal Science (ANSC)"
+  },
+  {
+    "code": "ANTH",
+    "name": "ANTH - Anthropology (ANTH)"
+  },
+  {
+    "code": "ARAB",
+    "name": "ARAB - Arabic (ARAB)"
+  },
+  {
+    "code": "ARCH",
+    "name": "ARCH - Architecture (ARCH)"
+  },
+  {
+    "code": "AREN",
+    "name": "AREN - Architectural Engr (AREN)"
+  },
+  {
+    "code": "ARSC",
+    "name": "ARSC - Arts & Sciences (ARSC)"
+  },
+  {
+    "code": "ARTS",
+    "name": "ARTS - Art (ARTS)"
+  },
+  {
+    "code": "ASCC",
+    "name": "ASCC - Academic Success Center (ASCC)"
+  },
+  {
+    "code": "ASIA",
+    "name": "ASIA - Asian Studies (ASIA)"
+  },
+  {
+    "code": "ASTR",
+    "name": "ASTR - Astronomy (ASTR)"
+  },
+  {
+    "code": "ATMO",
+    "name": "ATMO - Atmospheric Sciences (ATMO)"
+  },
+  {
+    "code": "ATTR",
+    "name": "ATTR - Athletic Training (ATTR)"
+  },
+  {
+    "code": "BAEN",
+    "name": "BAEN - Biological & Ag Engr (BAEN)"
+  },
+  {
+    "code": "BEFB",
+    "name": "BEFB - Bilingual Ed Field Based (BEFB)"
+  },
+  {
+    "code": "BESC",
+    "name": "BESC - Bioenvironmental Sci (BESC)"
+  },
+  {
+    "code": "BICH",
+    "name": "BICH - Biochemistry (BICH)"
+  },
+  {
+    "code": "BIMS",
+    "name": "BIMS - Biomedical Science (BIMS)"
+  },
+  {
+    "code": "BIOL",
+    "name": "BIOL - Biology (BIOL)"
+  },
+  {
+    "code": "BMEN",
+    "name": "BMEN - Biomedical Engineering (BMEN)"
+  },
+  {
+    "code": "BOTN",
+    "name": "BOTN - Botany (BOTN)"
+  },
+  {
+    "code": "BUSH",
+    "name": "BUSH - Geo Bush School of Gov (BUSH)"
+  },
+  {
+    "code": "BUSN",
+    "name": "BUSN - Mays Business School (BUSN)"
+  },
+  {
+    "code": "CARC",
+    "name": "CARC - College of Architecture (CARC)"
+  },
+  {
+    "code": "CEHD",
+    "name": "CEHD - Coll of Ed & Human Dev (CEHD)"
+  },
+  {
+    "code": "CHEM",
+    "name": "CHEM - Chemistry (CHEM)"
+  },
+  {
+    "code": "CHEN",
+    "name": "CHEN - Chemical Engineering (CHEN)"
+  },
+  {
+    "code": "CHIN",
+    "name": "CHIN - Chinese (CHIN)"
+  },
+  {
+    "code": "CLAS",
+    "name": "CLAS - Classics (CLAS)"
+  },
+  {
+    "code": "CLEN",
+    "name": "CLEN - College of Engineering (CLEN)"
+  },
+  {
+    "code": "COMM",
+    "name": "COMM - Communication (COMM)"
+  },
+  {
+    "code": "COSC",
+    "name": "COSC - Construction Science (COSC)"
+  },
+  {
+    "code": "CSCE",
+    "name": "CSCE - Computer Sci & Engr (CSCE)"
+  },
+  {
+    "code": "CULN",
+    "name": "CULN - Culinology (CULN)"
+  },
+  {
+    "code": "CVEN",
+    "name": "CVEN - Civil Engineering (CVEN)"
+  },
+  {
+    "code": "CYBR",
+    "name": "CYBR - Cybersecurity (CYBR)"
+  },
+  {
+    "code": "DAEN",
+    "name": "DAEN - Data Engineering (DAEN)"
+  },
+  {
+    "code": "DASC",
+    "name": "DASC - Dairy Science (DASC)"
+  },
+  {
+    "code": "DCED",
+    "name": "DCED - Dance Education (DCED)"
+  },
+  {
+    "code": "DDHS",
+    "name": "DDHS - Dental Hygiene (DDHS)"
+  },
+  {
+    "code": "DIVE",
+    "name": "DIVE - Diving Tech and Methods (DIVE)"
+  },
+  {
+    "code": "ECCB",
+    "name": "ECCB - Eco & Conservation Biol (ECCB)"
+  },
+  {
+    "code": "ECDE",
+    "name": "ECDE - Early Chldhd Devl & Educ (ECDE)"
+  },
+  {
+    "code": "ECEN",
+    "name": "ECEN - Electrical & Comp Engr (ECEN)"
+  },
+  {
+    "code": "ECHE",
+    "name": "ECHE - Early Chldhd Ed Fld Based (ECHE)"
+  },
+  {
+    "code": "ECMT",
+    "name": "ECMT - Econometrics (ECMT)"
+  },
+  {
+    "code": "ECON",
+    "name": "ECON - Economics (ECON)"
+  },
+  {
+    "code": "EDCI",
+    "name": "EDCI - Educ Curriculum & Dev (EDCI)"
+  },
+  {
+    "code": "EHRD",
+    "name": "EHRD - Ed Human Res Develop (EHRD)"
+  },
+  {
+    "code": "ENDG",
+    "name": "ENDG - Engr Design Graphics (ENDG)"
+  },
+  {
+    "code": "ENDS",
+    "name": "ENDS - Environmental Design (ENDS)"
+  },
+  {
+    "code": "ENGL",
+    "name": "ENGL - English (ENGL)"
+  },
+  {
+    "code": "ENGR",
+    "name": "ENGR - Engineering (ENGR)"
+  },
+  {
+    "code": "ENST",
+    "name": "ENST-Environmental Studies (ENST)"
+  },
+  {
+    "code": "ENTC",
+    "name": "ENTC - Engineering Technology (ENTC)"
+  },
+  {
+    "code": "ENTO",
+    "name": "ENTO - Entomology (ENTO)"
+  },
+  {
+    "code": "EPFB",
+    "name": "EPFB - Educ Psyc Field Based (EPFB)"
+  },
+  {
+    "code": "EPSY",
+    "name": "EPSY - Educational Psychology (EPSY)"
+  },
+  {
+    "code": "ESET",
+    "name": "ESET - Electronic Sys Eng Tech (ESET)"
+  },
+  {
+    "code": "EURO",
+    "name": "EURO - European Studies (EURO)"
+  },
+  {
+    "code": "EVEN",
+    "name": "EVEN - Environmental Engr (EVEN)"
+  },
+  {
+    "code": "FILM",
+    "name": "FILM - Film Studies (FILM)"
+  },
+  {
+    "code": "FINC",
+    "name": "FINC - Finance (FINC)"
+  },
+  {
+    "code": "FINP",
+    "name": "FINP - Financial Planning (FINP)"
+  },
+  {
+    "code": "FIVS",
+    "name": "FIVS - Forensic & Inv Science (FIVS)"
+  },
+  {
+    "code": "FREN",
+    "name": "FREN - French (FREN)"
+  },
+  {
+    "code": "FSCI",
+    "name": "FSCI - Foundational Sciences (FSCI)"
+  },
+  {
+    "code": "FSTC",
+    "name": "FSTC - Food Science & Tech (FSTC)"
+  },
+  {
+    "code": "FYEX",
+    "name": "FYEX - First Year Experience (FYEX)"
+  },
+  {
+    "code": "GALV",
+    "name": "GALV - TAMUG Study Abroad (GALV)"
+  },
+  {
+    "code": "GENE",
+    "name": "GENE - Genetics (GENE)"
+  },
+  {
+    "code": "GEOG",
+    "name": "GEOG - Geography (GEOG)"
+  },
+  {
+    "code": "GEOL",
+    "name": "GEOL - Geology (GEOL)"
+  },
+  {
+    "code": "GEOP",
+    "name": "GEOP - Geophysics (GEOP)"
+  },
+  {
+    "code": "GEOS",
+    "name": "GEOS - Geosciences (GEOS)"
+  },
+  {
+    "code": "GERM",
+    "name": "GERM - German (GERM)"
+  },
+  {
+    "code": "GLST",
+    "name": "GLST - Global Studies (GLST)"
+  },
+  {
+    "code": "HBRW",
+    "name": "HBRW - Hebrew (HBRW)"
+  },
+  {
+    "code": "HEFB",
+    "name": "HEFB - Health Ed Field Based (HEFB)"
+  },
+  {
+    "code": "HHUM",
+    "name": "HHUM - Health Humanities (HHUM)"
+  },
+  {
+    "code": "HISP",
+    "name": "HISP - Hispanic Studies (HISP)"
+  },
+  {
+    "code": "HIST",
+    "name": "HIST - History (HIST)"
+  },
+  {
+    "code": "HLTH",
+    "name": "HLTH - Health (HLTH)"
+  },
+  {
+    "code": "HMGT",
+    "name": "HMGT - Hosp, Hotel Mgmt, Tour (HMGT)"
+  },
+  {
+    "code": "HORT",
+    "name": "HORT - Horticultural Sciences (HORT)"
+  },
+  {
+    "code": "HUMA",
+    "name": "HUMA - Humanities (HUMA)"
+  },
+  {
+    "code": "IBUS",
+    "name": "IBUS - International Business (IBUS)"
+  },
+  {
+    "code": "IDIS",
+    "name": "IDIS - Industrial Distribution (IDIS)"
+  },
+  {
+    "code": "INST",
+    "name": "INST - Interdisciplinary Studies (INST)"
+  },
+  {
+    "code": "INTA",
+    "name": "INTA - International Affairs (INTA)"
+  },
+  {
+    "code": "ISEN",
+    "name": "ISEN - Indust & Systems Engr (ISEN)"
+  },
+  {
+    "code": "ISTM",
+    "name": "ISTM - Mgmt Info Systems (ISTM)"
+  },
+  {
+    "code": "ITAL",
+    "name": "ITAL - Italian (ITAL)"
+  },
+  {
+    "code": "ITDE",
+    "name": "ITDE - Interdisciplinary Engr (ITDE)"
+  },
+  {
+    "code": "ITSV",
+    "name": "ITSV - Info Tech Service Mgmt (ITSV)"
+  },
+  {
+    "code": "JAPN",
+    "name": "JAPN - Japanese (JAPN)"
+  },
+  {
+    "code": "JOUR",
+    "name": "JOUR - Journalism (JOUR)"
+  },
+  {
+    "code": "JWST",
+    "name": "JWST - Jewish Studies (JWST)"
+  },
+  {
+    "code": "KINE",
+    "name": "KINE - Kinesiology (KINE)"
+  },
+  {
+    "code": "KNFB",
+    "name": "KNFB - Kinesiology Field Based (KNFB)"
+  },
+  {
+    "code": "LAND",
+    "name": "LAND - Landscape Architecture (LAND)"
+  },
+  {
+    "code": "LING",
+    "name": "LING - Linguistics (LING)"
+  },
+  {
+    "code": "LMAS",
+    "name": "LMAS - Latino/Mex Amer Studies (LMAS)"
+  },
+  {
+    "code": "MARA",
+    "name": "MARA - Maritime Administration (MARA)"
+  },
+  {
+    "code": "MARB",
+    "name": "MARB - Marine Biology (MARB)"
+  },
+  {
+    "code": "MARE",
+    "name": "MARE - Marine Engr Technology (MARE)"
+  },
+  {
+    "code": "MARR",
+    "name": "MARR - Marine Engr Technology (MARR)"
+  },
+  {
+    "code": "MARS",
+    "name": "MARS - Marine Science (MARS)"
+  },
+  {
+    "code": "MART",
+    "name": "MART - Marine Transportation (MART)"
+  },
+  {
+    "code": "MASC",
+    "name": "MASC - Integrated Math & Sci (MASC)"
+  },
+  {
+    "code": "MASE",
+    "name": "MASE - Maritime Systems Engr (MASE)"
+  },
+  {
+    "code": "MAST",
+    "name": "MAST - Maritime Studies (MAST)"
+  },
+  {
+    "code": "MATH",
+    "name": "MATH - Mathematics (MATH)"
+  },
+  {
+    "code": "MEEN",
+    "name": "MEEN - Mechanical Engineering (MEEN)"
+  },
+  {
+    "code": "MEFB",
+    "name": "MEFB - Mid Grds Ed Field Based (MEFB)"
+  },
+  {
+    "code": "MEPS",
+    "name": "MEPS - Molecular & Env Plant Sci (MEPS)"
+  },
+  {
+    "code": "MGMT",
+    "name": "MGMT - Management (MGMT)"
+  },
+  {
+    "code": "MICR",
+    "name": "MICR - Microbiology (MICR)"
+  },
+  {
+    "code": "MKTG",
+    "name": "MKTG - Marketing (MKTG)"
+  },
+  {
+    "code": "MLSC",
+    "name": "MLSC - Military Science (MLSC)"
+  },
+  {
+    "code": "MMET",
+    "name": "MMET - Mfg & Mech Engr Tech (MMET)"
+  },
+  {
+    "code": "MODL",
+    "name": "MODL - Modern Languages (MODL)"
+  },
+  {
+    "code": "MSEN",
+    "name": "MSEN - Materials Science & Engr (MSEN)"
+  },
+  {
+    "code": "MSTC",
+    "name": "MSTC - Music Technology (MSTC)"
+  },
+  {
+    "code": "MTDE",
+    "name": "MTDE - Multidisciplinary Engr (MTDE)"
+  },
+  {
+    "code": "MUSC",
+    "name": "MUSC - Music (MUSC)"
+  },
+  {
+    "code": "MUST",
+    "name": "MUST - Museum Studies (MUST)"
+  },
+  {
+    "code": "MXET",
+    "name": "MXET - Multidiscip Engr Tech (MXET)"
+  },
+  {
+    "code": "NAUT",
+    "name": "NAUT - Nautical Science (NAUT)"
+  },
+  {
+    "code": "NRSC",
+    "name": "NRSC - Neuroscience (NRSC)"
+  },
+  {
+    "code": "NUEN",
+    "name": "NUEN - Nuclear Engineering (NUEN)"
+  },
+  {
+    "code": "NURS",
+    "name": "NURS - Nursing (NURS)"
+  },
+  {
+    "code": "NUTR",
+    "name": "NUTR - Nutrition (NUTR)"
+  },
+  {
+    "code": "NVSC",
+    "name": "NVSC - Naval Science (NVSC)"
+  },
+  {
+    "code": "OCEN",
+    "name": "OCEN - Ocean Engineering (OCEN)"
+  },
+  {
+    "code": "OCNG",
+    "name": "OCNG - Oceanography (OCNG)"
+  },
+  {
+    "code": "PBSI",
+    "name": "PBSI - Psyc & Brain Sciences (PBSI)"
+  },
+  {
+    "code": "PERF",
+    "name": "PERF - Performance Studies (PERF)"
+  },
+  {
+    "code": "PETE",
+    "name": "PETE - Petroleum Engineering (PETE)"
+  },
+  {
+    "code": "PHIL",
+    "name": "PHIL - Philosophy (PHIL)"
+  },
+  {
+    "code": "PHLT",
+    "name": "PHLT - Public Health (PHLT)"
+  },
+  {
+    "code": "PHYS",
+    "name": "PHYS - Physics (PHYS)"
+  },
+  {
+    "code": "PLPA",
+    "name": "PLPA - Plant Pathology (PLPA)"
+  },
+  {
+    "code": "POLS",
+    "name": "POLS - Political Science (POLS)"
+  },
+  {
+    "code": "PORT",
+    "name": "PORT - Portuguese (PORT)"
+  },
+  {
+    "code": "POSC",
+    "name": "POSC - Poultry Science (POSC)"
+  },
+  {
+    "code": "PVFA",
+    "name": "PVFA - Perf Vis Fine Arts (PVFA)"
+  },
+  {
+    "code": "RDNG",
+    "name": "RDNG - Reading (RDNG)"
+  },
+  {
+    "code": "RELS",
+    "name": "RELS - Religious Studies (RELS)"
+  },
+  {
+    "code": "RPTS",
+    "name": "RPTS - Rec, Park & Tourism Sci (RPTS)"
+  },
+  {
+    "code": "RUSS",
+    "name": "RUSS - Russian (RUSS)"
+  },
+  {
+    "code": "RWFM",
+    "name": "RWFM - Rang Wild & Fish Mgmt (RWFM)"
+  },
+  {
+    "code": "SCMT",
+    "name": "SCMT - Supply Chain Mgmt (SCMT)"
+  },
+  {
+    "code": "SCSC",
+    "name": "SCSC - Soil and Crop Sciences (SCSC)"
+  },
+  {
+    "code": "SEFB",
+    "name": "SEFB - Special Ed Field Based (SEFB)"
+  },
+  {
+    "code": "SENG",
+    "name": "SENG - Safety Engineering (SENG)"
+  },
+  {
+    "code": "SOCI",
+    "name": "SOCI - Sociology (SOCI)"
+  },
+  {
+    "code": "SOMS",
+    "name": "SOMS - Schl of Military Sciences (SOMS)"
+  },
+  {
+    "code": "SPAN",
+    "name": "SPAN - Spanish (SPAN)"
+  },
+  {
+    "code": "SPED",
+    "name": "SPED - Special Education (SPED)"
+  },
+  {
+    "code": "SPMT",
+    "name": "SPMT - Sport Management (SPMT)"
+  },
+  {
+    "code": "STAT",
+    "name": "STAT - Statistics (STAT)"
+  },
+  {
+    "code": "TCMG",
+    "name": "TCMG - Technology Management (TCMG)"
+  },
+  {
+    "code": "TEED",
+    "name": "TEED - Teacher Education (TEED)"
+  },
+  {
+    "code": "TEFB",
+    "name": "TEFB - Teacher Ed Field Based (TEFB)"
+  },
+  {
+    "code": "THEA",
+    "name": "THEA - Theatre (THEA)"
+  },
+  {
+    "code": "UGST",
+    "name": "UGST - Undergraduate Studies (UGST)"
+  },
+  {
+    "code": "URPN",
+    "name": "URPN - Urban & Reg Planning (URPN)"
+  },
+  {
+    "code": "VIBS",
+    "name": "VIBS - Vet Integrative Biosci (VIBS)"
+  },
+  {
+    "code": "VIST",
+    "name": "VIST - Visual Studies (VIST)"
+  },
+  {
+    "code": "VLCS",
+    "name": "VLCS - Vet Large Animal Clin Sc (VLCS)"
+  },
+  {
+    "code": "VSCS",
+    "name": "VSCS - Vet Small Animal Clin Sc (VSCS)"
+  },
+  {
+    "code": "VTPB",
+    "name": "VTPB - Veterinary Pathobiology (VTPB)"
+  },
+  {
+    "code": "VTPP",
+    "name": "VTPP - Vet Physiology & Pharm (VTPP)"
+  },
+  {
+    "code": "WFSC",
+    "name": "WFSC - Wildlife & Fisheries Sci (WFSC)"
+  },
+  {
+    "code": "WGST",
+    "name": "WGST - Women's & Gender Studies (WGST)"
+  },
+  {
+    "code": "ZOOL",
+    "name": "ZOOL - Zoology (ZOOL)"
+  },
+  {
+    "code": "COURSE-DESCRIPTIONS.PDF",
+    "name": "Download Page (PDF)"
+  }
+]
